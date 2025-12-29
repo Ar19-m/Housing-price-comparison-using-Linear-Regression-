@@ -1,0 +1,95 @@
+#  Housing Price Prediction using Regression Models
+
+##  Project Overview
+
+This project performs a **comparative regression analysis** to predict housing prices using the Boston Housing dataset.
+The goal is to evaluate and compare **linear** and **ensemble-based** regression models, analyse their predictive performance, and interpret **feature importance** to understand key socio-economic drivers of housing prices.
+
+##  Objectives
+
+* Build a **baseline Linear Regression model**
+* Implement a **Gradient Boosting Regressor** for non-linear modelling
+* Compare models using appropriate **regression metrics**
+* Apply **cross-validation** to assess generalization
+* Analyse and interpret **feature importance**
+* Draw insights from agreement between linear and non-linear models
+
+##  Dataset
+
+* **Dataset**: Boston Housing Dataset
+* **Target variable**: Median value of owner-occupied homes
+* **Features** include socio-economic, environmental, and geographic indicators such as:
+
+  * Average number of rooms (`RM`)
+  * Percentage of lower-status population (`LSTAT`)
+  * Crime rate (`CRIM`)
+  * Nitric oxide concentration (`NOX`)
+  * Accessibility to highways (`RAD`)
+
+
+
+##  Models Implemented
+
+1. **Linear Regression**
+
+   * Interpretable baseline model
+   * Captures global linear relationships
+
+2. **Gradient Boosting Regressor**
+
+   * Ensemble-based, non-linear model
+   * Captures complex interactions and non-linear effects
+   * Implemented using a pre-processing pipeline to avoid data leakage
+
+## Evaluation Metrics
+
+The models are evaluated using regression-appropriate metrics:
+
+* **R² Score** (coefficient of determination)
+* **RMSE** (Root Mean Squared Error)
+
+## 🔍 Feature Importance Analysis
+
+Feature importance was analysed for both models:
+
+### Linear Regression
+
+* Coefficients indicate **direction and magnitude** of influence
+* Provides interpretable, global relationships
+
+### Gradient Boosting
+
+* Importance based on split contribution
+* Highlights dominant predictors in non-linear settings
+
+### Key Findings:
+
+* **LSTAT** (% lower-status population) and **RM** (average rooms per dwelling) dominate prediction
+* Both linear and ensemble models identify similar top features
+* Agreement across models indicates **stable and robust predictive signals**
+* Other features contribute marginally once dominant variables are accounted for
+
+---
+
+## Insights & Interpretation
+
+* Complex models do not always outperform simpler ones on small, structured datasets
+* Similar feature rankings across models suggest strong underlying data structure
+* Socio-economic indicators play a more significant role than purely geographic variables
+* Model agreement increases confidence in interpretability and generalization
+
+---
+
+## Technologies Used
+
+* Python
+* NumPy
+* Pandas
+* Matplotlib
+* Scikit-learn
+
+
+## Conclusion
+
+This project demonstrates a complete regression workflow—from baseline modelling to ensemble learning and interpretability—highlighting the importance of **model comparison**, **robust evaluation**, and **data-driven insights** in applied machine learning.
+
